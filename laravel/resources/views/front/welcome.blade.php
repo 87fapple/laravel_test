@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 初心者
+                    很高興見到你,{{$name}}
                 </div>
 
                 <div class="links">
