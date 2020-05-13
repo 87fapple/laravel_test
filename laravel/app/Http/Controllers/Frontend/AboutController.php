@@ -13,6 +13,6 @@ class AboutController extends Controller
     {
         $about = About::find(1);
         $website = Website::find(1);
-        return view('frontend.about', compact('about', 'website'));
+        return view('front.about', compact('about', 'website'));
     }
 }

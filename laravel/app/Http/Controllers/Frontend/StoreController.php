@@ -15,6 +15,6 @@ class StoreController extends Controller
         $store = Store::find(1);
         $website = Website::find(1);
         $about = About::find(1);
-        return view('frontend.store', compact('store', 'website', 'about'));
+        return view('front.store', compact('store', 'website', 'about'));
     }
 }

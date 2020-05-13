@@ -17,56 +17,41 @@ use Illuminate\Support\Facades\Route;
 
 
 
+Route::get('/', 'Frontend\HomeController@index')->name('home');
+
+Route::get('about', 'Frontend\AboutController@index')->name('about');
+
+Route::get('products', 'Frontend\ProductController@index')->name('products');
+
+Route::get('store', 'Frontend\StoreController@index')->name('store');
+
+/*
 Route::get('/admin/login', function (){
     return view('backend.login');
 });
-
 Route::post('/admin/login', 'Auth\LoginController@login')->name('login');
-// 用auth middleware進行驗證
-// prefix 代表group內的url路徑前都有/admin/
-// name 代表 group中route命名時，每個name的前綴會加入admin.
+*/
+
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function() {
- 
-    // 登出
+
     Route::get('/admin/logout', 'Auth\LoginController@logout')->name('logout');
- 
-    // Website的更新
+
     Route::get('/', 'Backend\WebsiteController@edit')->name('website.edit');
     Route::post('/', 'Backend\WebsiteController@update')->name('website.update');
- 
-    // Home的更新
+    
     Route::get('home', 'Backend\HomeController@edit')->name('home.edit');
     Route::post('home', 'Backend\HomeController@update')->name('home.update');
- 
-    // About的更新
+
     Route::get('about', 'Backend\AboutController@edit')->name('about.edit');
     Route::post('about', 'Backend\AboutController@update')->name('about.update');
- 
-    // Product的增刪改查還有index頁面
-    Route::resource('product', 'Backend\ProductController', ['except'=> ['show']]);
- 
-    // Store的更新
+
+    Route::resource('product', 'Backend\ProductController', ['except' => ['show']]);
+
     Route::get('store', 'Backend\StoreController@edit')->name('store.edit');
     Route::post('store', 'Backend\StoreController@update')->name('store.update');
-});
 
+});
 
 Auth::routes(['register' => false]);
 
-Route::get('/', 'HomeController@index')->name('home');
-
-Route::get('/', function () {
-    return view('front.index');
-})->name('home');
-
-Route::get('about', function () {
-    return view('front.about');
-})->name('about');
- 
-Route::get('products', function () {
-    return view('front.products');
-})->name('products');
-
-Route::get('store', function () {
-    return view('front.store');
-})->name('store');
+//Route::get('/', 'HomeController@index')->name('home');
