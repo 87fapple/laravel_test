@@ -1,7 +1,7 @@
 @extends('front.layouts.master')
 
 @section('title', 'products')
-
+@section('nav_products','active');
 @section('content')
 
   <section class="page-section">

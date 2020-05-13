@@ -2,6 +2,8 @@
 
 @section('title', 'about')
 
+@section('nav_about','active');
+
 @section('content')
 
 

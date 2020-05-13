@@ -1,0 +1,6 @@
+{
+    "php.validate.run": "onType",
+    "php.executablePath": "",
+    "files.autoSave": "onFocusChange",
+    "editor.find.addExtraSpaceOnTop": false
+}

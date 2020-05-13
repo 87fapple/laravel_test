@@ -2,6 +2,8 @@
 
 @section('title', 'home')
 
+@section('nav_home','active');
+
 @section('content')
 
   <section class="page-section clearfix">
