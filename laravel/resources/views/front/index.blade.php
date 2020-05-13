@@ -9,9 +9,7 @@
     <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ asset('/uploads/home/' . $home->image) }}" alt="">
       <div class="intro-text left-0 text-center bg-faded p-5 rounded">
         {!! $home->content_1 !!}
-        <div class="intro-button mx-auto">
-          <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
-        </div>
+        
       </div>
     </div>
   </div>
