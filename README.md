@@ -11,4 +11,5 @@ php版本:7.4.4
 再透過Auth認證與資料庫帳號登入
 
 創建後台修改網頁內容
-
+信箱:admin@gmail.com
+密碼:admin
