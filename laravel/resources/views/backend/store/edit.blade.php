@@ -199,7 +199,7 @@
             </div>
 
             <div class="form-group row justify-content-end">
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                     <button type="submit" class="btn btn-primary">更新</button>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 <div class="container">
     <section class="page-section my-5 p-5">
         <div class="row">
-            <div class="col-sm-1">
+            <div class="col-sm-2">
                 <a href="{{ route('admin.product.create') }}" class="btn btn-primary">新增商品</a>
             </div>
         </div>
